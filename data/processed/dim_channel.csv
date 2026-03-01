@@ -1,0 +1,6 @@
+channel_name,channel_key,channel_type
+organic_search,1,organic
+paid_search,2,paid
+email,3,owned
+social_media,4,paid
+referral,5,organic
