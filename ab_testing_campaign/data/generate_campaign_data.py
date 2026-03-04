@@ -36,7 +36,7 @@ CAMPAIGN_CONFIG = {
         "variant": "Treatment",
         "ctr": 0.22,
         "cvr": 0.095,
-        "revenue_mean": 110.0,  # ~10 % higher mean than Campaign_A
+        "revenue_mean": 110.0,  # ~10% higher mean than Campaign_A
         "marketing_cost": 1.20,
     },
     "Campaign_C": {
