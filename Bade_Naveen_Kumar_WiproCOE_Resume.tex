@@ -1,0 +1,178 @@
+%% Bade_Naveen_Kumar_WiproCOE_Resume.tex
+%% ATS-Compliant One-Page Resume — Wipro COE ELITE | 2026 | FY'27 (Project Engineer)
+%% Compile with: pdflatex Bade_Naveen_Kumar_WiproCOE_Resume.tex
+
+\documentclass[10pt,a4paper]{article}
+
+%% ---------- packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.55in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{parskip}
+
+%% ---------- colours ----------
+\definecolor{accent}{HTML}{1A237E}   % dark indigo — ATS safe (printed as black)
+
+%% ---------- hyperref ----------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Bade Naveen Kumar},
+  pdftitle={Bade Naveen Kumar — Wipro COE ELITE Resume}
+}
+
+%% ---------- section formatting ----------
+\titleformat{\section}
+  {\bfseries\large\color{accent}}
+  {}{0em}{}
+  [\color{accent}\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+%% ---------- helpers ----------
+\newcommand{\entry}[4]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} — \textit{#2} & \textbf{#3}
+  \end{tabularx}
+  \vspace{1pt}#4\vspace{4pt}
+}
+
+\newcommand{\projentry}[3]{%
+  \noindent\textbf{#1} \hfill \textit{#2}
+  \vspace{1pt}#3\vspace{4pt}
+}
+
+\setlist[itemize]{leftmargin=1.2em, topsep=2pt, itemsep=0pt, parsep=0pt}
+
+\pagestyle{empty}
+
+%% ==========================================================================
+\begin{document}
+
+%% ===== HEADER ===============================================================
+\begin{center}
+  {\LARGE\bfseries BADE NAVEEN KUMAR}\\[3pt]
+  Bhubaneswar, Odisha, India\ \ $\vert$\ \
+  \href{mailto:badenaveenkumar@gmail.com}{badenaveenkumar@gmail.com}\ \ $\vert$\ \
+  +91-XXXXXXXXXX\\[2pt]   %% TODO: replace with actual mobile number
+  \href{https://linkedin.com/in/bade-naveen-kumar}{linkedin.com/in/bade-naveen-kumar}\ \ $\vert$\ \
+  \href{https://github.com/BadeNaveenKumar}{github.com/BadeNaveenKumar}
+\end{center}
+
+\vspace{2pt}
+
+%% ===== PROFILE SUMMARY ======================================================
+\section{Profile Summary}
+Motivated Computer Science \& Engineering (IoT) final-year student with hands-on experience building
+end-to-end data pipelines, interactive dashboards, and Python automation tools.
+Adept at translating raw datasets into actionable business intelligence using SQL, Power~BI, and Python.
+Supplementary skills in embedded/IoT systems and a disciplined background as an NNC~Cadet make me a
+well-rounded candidate for Wipro's Project~Engineer (COE~ELITE) role, where I am eager to contribute
+to impactful engineering and analytics projects from day one.
+
+%% ===== EDUCATION ============================================================
+\section{Education}
+\entry{Siksha `O' Anusandhan University}{B.Tech — CSE (IoT) \quad CGPA: 7.2/10}{2022 -- 2026}{}
+
+\vspace{-2pt}
+\noindent
+\begin{tabularx}{\linewidth}{@{}X X@{}}
+  \textbf{Class XII (CBSE/State Board)} — Science (PCM) & \textbf{Class X (CBSE/State Board)} \\
+  Percentage: \textit{XX\%} \hfill Year: 20XX & Percentage: \textit{XX\%} \hfill Year: 20XX
+  %% TODO: replace XX% and 20XX with actual board, percentage and year
+\end{tabularx}
+
+%% ===== TECHNICAL SKILLS =====================================================
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+  \textbf{Languages}        & Python, SQL, C/C++, Bash \\
+  \textbf{Data \& Analytics}& Pandas, NumPy, Matplotlib, Seaborn, Plotly, Power~BI, Tableau, Excel \\
+  \textbf{Databases}        & MySQL, PostgreSQL, SQLite \\
+  \textbf{Embedded / IoT}   & Arduino, Raspberry~Pi, Sensor interfacing, MQTT, I2C/SPI protocols \\
+  \textbf{Automation \& ETL}& Apache~Airflow (basics), Cron, Pytest, Selenium \\
+  \textbf{Tools / Platforms}& Git, GitHub, Jupyter, VS~Code, Linux, MS~Office \\
+  \textbf{Concepts}         & Data Pipeline Design, Dashboard Development, MIS Reporting, A/B Testing \\
+\end{tabularx}
+
+%% ===== PROJECTS =============================================================
+\section{Projects}
+
+\projentry{E-Commerce Retention Analytics Platform}{Python $\cdot$ SQL $\cdot$ Power BI $\cdot$ Pandas}{
+\begin{itemize}
+  \item Engineered an end-to-end ETL pipeline ingesting 50\,000+ transaction records; reduced data
+        preparation time by 40\%.
+  \item Built cohort-retention and RFM-segmentation models revealing a 22\% churn rate in the
+        90-day window, informing targeted re-engagement campaigns.
+  \item Developed an interactive Power~BI dashboard with 8 KPI tiles (revenue, AOV, CLV, churn)
+        enabling stakeholders to drill down by segment, region, and time period.
+\end{itemize}
+}
+
+\projentry{Data Pipeline \& Retail Sales Analytics}{Python $\cdot$ MySQL $\cdot$ Apache Airflow $\cdot$ Matplotlib}{
+\begin{itemize}
+  \item Designed an automated daily data pipeline that cleansed, validated, and loaded retail sales
+        data from CSV/API sources into a relational database with 99\%+ data accuracy.
+  \item Generated automated MIS reports (weekly/monthly) covering sales trends, inventory turnover,
+        and forecasting, reducing manual reporting effort by $\sim$3 hours/week.
+  \item Applied A/B testing on marketing campaigns, identifying a 15\% uplift from personalised
+        discount offers using statistical significance tests.
+\end{itemize}
+}
+
+\projentry{Embedded IoT Sensor Monitor}{C $\cdot$ Python $\cdot$ Raspberry Pi $\cdot$ MQTT}{
+\begin{itemize}
+  \item Developed a real-time sensor monitoring system (temperature, humidity, gas) using Raspberry~Pi
+        and multiple I2C/SPI sensors with MQTT-based data streaming.
+  \item Implemented threshold-based alert logic and a lightweight Python dashboard for live telemetry
+        visualisation, reducing anomaly detection lag to under 2~seconds.
+  \item Documented hardware schematics and firmware, enabling seamless handoff and future
+        extensibility.
+\end{itemize}
+}
+
+%% ===== CERTIFICATIONS =======================================================
+\section{Certifications}
+\begin{itemize}
+  \item \textbf{Python for Data Science} — NPTEL / Coursera \hfill \textit{20XX} %% TODO: add year
+  \item \textbf{Data Analytics with Python} — IBM / Cognitive Class \hfill \textit{20XX}
+  \item \textbf{SQL for Data Science} — UC Davis / Coursera \hfill \textit{20XX}
+  \item \textbf{Power BI Data Analyst Associate} — Microsoft (PL-300 preparation) \hfill \textit{20XX}
+  \item \textbf{Introduction to IoT} — Cisco Networking Academy \hfill \textit{20XX}
+  \item \textbf{NNC (Naval Cadet Corps) Certificate} — Ministry of Defence, Government of India
+        \hfill \textit{20XX}
+  %% TODO: fill in actual years above and add any certificates from attached images below
+  %% \item \textbf{[Certificate from Image 1]} — [Issuer] \hfill [Year]
+\end{itemize}
+
+%% ===== ACHIEVEMENTS ==========================================================
+\section{Achievements}
+\begin{itemize}
+  \item \textbf{NCC / NNC Cadet Recognition} — Awarded for exemplary discipline, leadership, and
+        service as a Naval Cadet, demonstrating teamwork and responsibility under structured training.
+  \item \textbf{Academic Excellence} — Maintained a consistent CGPA of 7.2/10 while simultaneously
+        managing engineering projects and extracurricular commitments.
+  \item \textbf{Open-Source Contributor} — Maintained the \textit{Ecommerce-retention-analytics}
+        GitHub repository with documented ETL pipelines, dashboards, and A/B testing modules.
+  %% TODO: add any awards / hackathon wins from certificate images here, e.g.:
+  %% \item \textbf{[Award Name]} — [Event / Organisation] \hfill [Year]
+\end{itemize}
+
+%% ===== ADDITIONAL ACTIVITIES ================================================
+\section{Additional Activities}
+\begin{itemize}
+  \item \textbf{NNC (Naval Cadet Corps)} — Active cadet; participated in national camps,
+        discipline drills, and community service drives, building strong leadership and
+        team-management skills.
+  \item \textbf{Technical Volunteer} — Assisted in organising department-level data-science
+        workshops and hackathons at Siksha `O' Anusandhan University.
+\end{itemize}
+
+\end{document}
