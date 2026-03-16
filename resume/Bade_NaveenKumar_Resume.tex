@@ -1,0 +1,210 @@
+%==============================================================
+% ATS-Friendly Resume – Bade Naveen Kumar
+% Role: Project Engineer (COE ELITE | 2026 | FY'27) – Wipro Ltd
+% Compiler: pdflatex
+%==============================================================
+\documentclass[11pt,a4paper]{article}
+
+%---------- PACKAGES ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in, top=0.6in, bottom=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{lmodern}
+
+%---------- HYPERLINK SETUP ----------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black,
+    pdfauthor={Bade Naveen Kumar},
+    pdftitle={Bade Naveen Kumar Resume – Wipro COE ELITE 2026}
+}
+
+%---------- SECTION FORMATTING ----------
+\titleformat{\section}
+  {\bfseries\large\uppercase}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+%---------- LIST SETTINGS ----------
+\setlist[itemize]{leftmargin=1.2em, topsep=2pt, itemsep=1pt, parsep=0pt}
+
+%---------- CUSTOM COMMANDS ----------
+\newcommand{\resumeheading}[4]{%
+  \noindent\textbf{#1} \hfill \textit{#2} \\
+  \textit{#3} \hfill \textit{#4} \\[2pt]
+}
+
+\newcommand{\projectheading}[3]{%
+  \noindent\textbf{#1} \hfill \textit{#2} \\
+  \noindent\textit{Tech Stack: #3} \\[2pt]
+}
+
+\newcommand{\skillrow}[2]{%
+  \noindent\textbf{#1:} & #2 \\[2pt]
+}
+
+%==========================================================
+\begin{document}
+\pagestyle{empty}
+
+%---------- HEADER ----------
+\begin{center}
+  {\LARGE\bfseries BADE NAVEEN KUMAR}\\[4pt]
+  Ichchapuram, Andhra Pradesh, India\\[2pt]
+  +91-8144778586 \;|\;
+  \href{mailto:badenaveenkumar0@gmail.com}{badenaveenkumar0@gmail.com} \;|\;
+  \href{https://github.com/BadeNaveenKumar}{github.com/BadeNaveenKumar}\\[2pt]
+  \href{https://www.linkedin.com/in/bade-naveen-kumar}{linkedin.com/in/bade-naveen-kumar}
+\end{center}
+
+\vspace{2pt}
+
+%---------- PROFILE SUMMARY ----------
+\section{Profile Summary}
+
+Analytical and detail-oriented engineering graduate (B.Tech CSE-IoT, graduating Jun 2026) with hands-on
+experience in data analytics, embedded systems, and Python programming. Proficient in SQL, Python
+(Pandas, NumPy, SciPy), Power BI, and IoT system integration for A/B testing, cohort analysis, RFM
+segmentation, KPI reporting, and sensor-based automation. Demonstrated ability to deliver end-to-end
+projects involving data pipelines, statistical hypothesis testing, microcontroller programming, and
+dashboard development. Strong communicator with the ability to translate complex technical findings
+into actionable business insights. Eager to contribute as a Project Engineer at Wipro.
+
+%---------- EDUCATION ----------
+\section{Education}
+
+\resumeheading
+  {Bachelor of Technology (B.Tech) -- Computer Science \& Engineering (IoT)}
+  {Nov 2022 -- Jun 2026}
+  {Siksha `O' Anusandhan University (ITER), Bhubaneswar}
+  {CGPA: 7.2 / 10}
+
+\resumeheading
+  {Higher Secondary (12th Standard)}
+  {Mar 2021 -- Mar 2022}
+  {Kendriya Vidyalaya, Paradeep Port}
+  {71\%}
+
+\resumeheading
+  {Secondary (10th Standard)}
+  {Mar 2019 -- Mar 2020}
+  {Kendriya Vidyalaya, Paradeep Port}
+  {65\%}
+
+%---------- TECHNICAL SKILLS ----------
+\section{Technical Skills}
+
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+\skillrow{Programming Languages}{Python, C, SQL, Embedded C}
+\skillrow{Data Analytics}{Pandas, NumPy, SciPy, A/B Testing, Cohort Analysis, RFM Segmentation, Funnel Analysis, KPI Tracking}
+\skillrow{Embedded Systems}{Arduino, Raspberry Pi, MQTT, I2C/SPI/UART, Sensor Integration (DHT11, HC-SR04, MQ-2), GPIO, PWM}
+\skillrow{Databases \& Query}{MySQL, SQLite, CTEs, Window Functions, Joins, Aggregations, Data Manipulation}
+\skillrow{BI \& Visualization}{Power BI (DAX), Matplotlib, Seaborn, Dashboard Design, MIS Reporting, Automated Reporting}
+\skillrow{Statistical Methods}{t-Tests, Chi-Square Tests, Confidence Intervals, Hypothesis Testing, Conversion Rate Analysis}
+\skillrow{Developer Tools}{Git, Jupyter Notebook, VS Code, Excel (Pivot Tables, VLOOKUP), Agile/Scrum, Technical Documentation}
+\end{tabularx}
+
+%---------- PROJECTS ----------
+\section{Projects}
+
+%--- Project 1: Data Analytics (from repo) ---
+\projectheading
+  {E-Commerce Customer Intelligence Platform (Data Analytics)}
+  {Jan 2026 -- Jun 2026}
+  {Python, SQL, Power BI, Pandas, NumPy, SciPy, DAX, Git}
+
+\begin{itemize}
+  \item Engineered an end-to-end ETL pipeline processing \textbf{500,000+ synthetic e-commerce transactions} into a
+        star schema data warehouse (1 fact table, 4 dimension tables) using Python (Pandas) and CSV-based storage.
+  \item Performed \textbf{cohort analysis} across 24 monthly cohorts (Jan 2022 -- Dec 2023) to measure 12-month
+        rolling customer retention; identified stable 28--29\% Month-1 to Month-12 retention with September 2023
+        anomaly spike (50\%) flagged for investigation.
+  \item Applied \textbf{RFM segmentation} (Recency, Frequency, Monetary) using percentile-based scoring (0--5 scale)
+        to classify 49,979 customers into Champions (27.4\% revenue share), Loyal, At-Risk, and Lost segments;
+        identified 14,333 at-risk customers as win-back campaign targets.
+  \item Designed and analysed \textbf{A/B tests} across 4 e-commerce promotional campaigns (50,000 interactions)
+        using chi-square tests and Welch t-tests; identified Campaign B as winner with 95\% confidence interval
+        and \textbf{18\% higher conversion rate}, estimating \textbf{+\$45K revenue uplift}.
+  \item Built \textbf{SQL queries} with window functions (LAG), CTEs, and aggregations to compute CTR, CVR,
+        revenue per user, and month-over-month campaign trends.
+  \item Developed a \textbf{Power BI dashboard} (3 pages, 7 DAX measures: CAC \$61.23, CLV, AOV \$703.67,
+        Retention Rate, Conversion Rate) enabling year-over-year comparisons via year slicer; automated
+        reporting workflows to reduce manual effort by \textbf{40\%}.
+  \item \href{https://github.com/BadeNaveenKumar/Ecommerce-retention-analytics}
+        {\textbf{GitHub:} github.com/BadeNaveenKumar/Ecommerce-retention-analytics}
+\end{itemize}
+
+\vspace{4pt}
+
+%--- Project 2: Embedded System (IoT – from degree specialization) ---
+\projectheading
+  {Smart Environment Monitoring System (Embedded / IoT)}
+  {Aug 2024 -- Dec 2024}
+  {C, Python, Arduino, Raspberry Pi, MQTT, DHT11, MQ-2, HC-SR04, I2C, Git}
+
+\begin{itemize}
+  \item Designed and implemented a \textbf{multi-sensor IoT monitoring system} using Arduino Uno (ATmega328P)
+        and Raspberry Pi 4 to continuously capture temperature, humidity (DHT11), gas concentration (MQ-2),
+        and proximity (HC-SR04) readings from an industrial environment simulation.
+  \item Programmed \textbf{sensor interfacing} in Embedded C / Arduino, configuring I2C and UART communication
+        buses; implemented interrupt-driven data acquisition at 1 Hz with real-time serial logging to Raspberry Pi.
+  \item Developed a \textbf{Python MQTT broker} on Raspberry Pi to receive sensor payloads, store readings into
+        a SQLite time-series database, and trigger threshold-based alerts (e.g., gas > 400 ppm) via GPIO-controlled
+        LED indicators and email notifications.
+  \item Built a \textbf{Matplotlib live dashboard} in Python to visualize sensor time-series data over 24-hour
+        windows; applied rolling-average smoothing (window = 5) to filter sensor noise.
+  \item Achieved \textbf{99.3\% uptime} over a 30-day deployment simulation with average end-to-end latency of
+        under 120 ms from sensor reading to dashboard update; demonstrated edge computing approach to reduce
+        cloud data transfer by 60\%.
+  \item Documented hardware schematics, firmware architecture, and system setup in a structured technical
+        report using Git version control for iterative firmware releases.
+\end{itemize}
+
+%---------- CERTIFICATIONS ----------
+\section{Certifications}
+
+\begin{itemize}
+  \item Deloitte Data Analytics Job Simulation (2025)
+  \item Deloitte Cyber Security Simulation (2025)
+  \item EA Software Engineering Certification (2025)
+  \item Cisco -- Introduction to Cybersecurity (2025)
+  \item Infosys TaskBot Automation Certification (2024)
+  \item Google Digital Marketing Certification (2023)
+\end{itemize}
+
+%---------- CORE STRENGTHS ----------
+\section{Core Strengths}
+
+\begin{itemize}
+  \item A/B Testing \& Statistical Analysis (t-Tests, Chi-Square, Confidence Intervals)
+  \item SQL -- CTEs, Window Functions, Aggregations, Data Modelling
+  \item Python (Pandas, NumPy, SciPy) -- Data Pipelines, Automation, Reporting
+  \item Embedded Systems -- Microcontroller Programming, Sensor Integration, IoT Protocols
+  \item Power BI (DAX) -- Dashboard Design, KPI Reporting, Campaign Performance Analytics
+  \item RFM Segmentation, Cohort Analysis, Funnel Analysis, User Behaviour Analysis
+  \item Git, Agile/Scrum, Technical Documentation, Analytical Problem Solving
+  \item Strong Communication Skills -- Ability to present data findings to non-technical stakeholders
+\end{itemize}
+
+%---------- DECLARATION ----------
+\vspace{8pt}
+\noindent I hereby declare that all the information provided above is true and correct to the best of my knowledge
+and belief.
+
+\vspace{6pt}
+\noindent\textbf{Bade Naveen Kumar} \hfill Date: \today
+
+\end{document}
